@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/user/JARI/build",
+  "command": "/usr/sbin/g++   -g -o CMakeFiles/JARI.dir/main.cpp.o -c /home/user/JARI/main.cpp",
+  "file": "/home/user/JARI/main.cpp",
+  "output": "CMakeFiles/JARI.dir/main.cpp.o"
+}
+]

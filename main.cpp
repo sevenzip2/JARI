@@ -3,6 +3,6 @@
 #include "Partition.h"
 using Random = effolkronium::random_static;
 int main(int, char**){
- Partition(3,4,26,2);
+ Partition a(7,2,14,3);
  std::cout<<"Hello"<<std::endl;
 }

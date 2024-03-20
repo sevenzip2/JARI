@@ -2,7 +2,8 @@
 class Jari
 {
 public:
-    Jari(unsigned a) : number(a)
+    Jari():number(0),classnum(0){}
+    Jari(unsigned a) : number(a),classnum(0)
     {
     }
     void setnumber(unsigned a)

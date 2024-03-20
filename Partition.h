@@ -1,20 +1,26 @@
 #pragma once
 #include "Jari.hpp"
+#include "effolkronium/random.hpp"
 #include <vector>
 #include <stdexcept>
 #include <exception>
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+using Random = effolkronium::random_static;
 unsigned GetNumberOfDigits(unsigned i);
 class Partition // 자리들 클래스
 {
 public:
+    Partition()
+    {
+
+    }
     Partition(int w, int h, int classnum, int sectionnum) : a(h),b(classnum) // w는 가로 자리 개수, h는 세로 자리 수, classnum은 반의 인원수, sectionnum은 1분단당 인원수를 의미
     {
         int realw = w / sectionnum;                      // 가로 분단 수
         int modw = w % sectionnum;                       // 가로 분단 수의 나머지
-        if (w * h < classnum || (w * h - classnum) >= w) // 주어진 자리수가 너무 적거나 너무 많으면 오류
+        if (w * h < classnum || (w * h - classnum) >= w || sectionnum > w) // 주어진 자리수가 너무 적거나 너무 많으면 오류
         {
             throw std::out_of_range("범위 지정 오류");
         }
@@ -81,8 +87,8 @@ public:
     {
         return maxnum;
     }
-    void changeRandom(int presetnum, std::vector<int> presetlist);
-    void changeRandom();
+    void changeRandom(int presetnum, std::vector<int> presetlist);//선지정 자리를 랜덤 배열
+    void changeRandom();//선지정되지 않은 모든 자리를 랜덤 좌석 배열
 private:
     std::vector<std::vector<std::vector<Jari>>> a; // 자리
     std::vector<int> b;//사람들

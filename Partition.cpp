@@ -1,9 +1,9 @@
 #include "Partition.h"
-void printpartition(const std::vector<std::vector<std::vector<Jari>>> &a, int maxnum, bool prefix)
+void printpartition(const std::vector<std::vector<std::vector<Jari>>> &a, int maxnum, bool prefix) // 자리의 형상 출력
 {
     int Jarisu = GetNumberOfDigits(maxnum);
 
-    for (int i = 0; i < a.size(); i++) 
+    for (int i = 0; i < a.size(); i++)
     {
         for (int j = 0; j < a[i].size(); j++)
         {
@@ -19,8 +19,8 @@ void printpartition(const std::vector<std::vector<std::vector<Jari>>> &a, int ma
                 {
                     q = a[i][j][k].getclassnum();
                 }
-                std::cout << q;
-                int p= GetNumberOfDigits(q);
+                std::cout << q<<" ";
+                int p = GetNumberOfDigits(q);
                 if (p < Jarisu)
                 {
                     for (int i = 0; i < (Jarisu - p); i++)
@@ -34,7 +34,67 @@ void printpartition(const std::vector<std::vector<std::vector<Jari>>> &a, int ma
         std::cout << std::endl;
     }
 }
-unsigned GetNumberOfDigits (unsigned i)
+void Partition::changeRandom(int presetnum, std::vector<int> presetlist)//선지정 자리를 랜덤 배열
 {
-    return i > 0 ? (int) log10 ((double) i) + 1 : 1;
+    std::vector<int> realpresetlist(presetnum);//선지정 목록
+    int i=0;
+    int presize=presetlist.size();
+    for(i=0;i<presize;i++)//선지정하기로 정한 번호들 추가
+    {
+        auto it=std::find(b.begin(),b.end(),presetlist[i]);
+        realpresetlist[i]=*it;
+        b.erase(it);
+    }
+    for(int j=0; j< presetnum - presize;j++)//나머지는 랜덤으로 추가
+    {
+        auto it = Random::get( b );
+        realpresetlist[i]=*it;
+        b.erase(it);
+        i++;
+    }
+    Random::shuffle(realpresetlist);
+    int num=0;
+    for (int i = 0; i < a.size(); i++)//랜덤으로 좌석 배열
+    {
+        for (int j = 0; j < a[i].size(); j++)
+        {
+            for (int k = 0; k < a[i][j].size(); k++)
+            {
+                if(a[i][j][k].getclassnum()==0)
+                {
+                    if(num >= realpresetlist.size())
+                    {
+                        break;
+                    }
+                a[i][j][k].setclassnum(realpresetlist[num]);
+                num++;
+                }
+                
+            }
+        }
+    }
+}
+void Partition::changeRandom()//선지정되지 않은 모든 자리를 랜덤 좌석 배열
+{
+    Random::shuffle(b);
+    int num=0;
+    for (int i = 0; i < a.size(); i++)
+    {
+        for (int j = 0; j < a[i].size(); j++)
+        {
+            for (int k = 0; k < a[i][j].size(); k++)
+            {
+                if(a[i][j][k].getclassnum()==0)
+                {
+                a[i][j][k].setclassnum(b[num]);
+                num++;
+                }
+                
+            }
+        }
+    }
+}
+unsigned GetNumberOfDigits(unsigned i)
+{
+    return i > 0 ? (int)log10((double)i) + 1 : 1;
 }

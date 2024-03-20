@@ -1,9 +1,9 @@
 #pragma once
-class Jari
+class Jari // 자리 클래스
 {
 public:
-    Jari():number(0),classnum(0){}
-    Jari(unsigned a) : number(a),classnum(0)
+    Jari() : number(0), classnum(0) {}        // 생성자
+    Jari(unsigned a) : number(a), classnum(0) // 생성자2
     {
     }
     void setnumber(unsigned a)
@@ -24,6 +24,6 @@ public:
     }
 
 private:
-    unsigned number;
-    unsigned classnum;
+    unsigned number;   // 자리번호
+    unsigned classnum; // 반번호
 };

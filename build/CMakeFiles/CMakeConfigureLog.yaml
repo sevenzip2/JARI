@@ -479,3 +479,39 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "random/test/CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/user/JARI/build/CMakeFiles/CMakeScratch/TryCompile-H8V8r9"
+      binary: "/home/user/JARI/build/CMakeFiles/CMakeScratch/TryCompile-H8V8r9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/user/JARI/build/CMakeFiles/CMakeScratch/TryCompile-H8V8r9'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_d02f7/fast
+        /usr/sbin/make  -f CMakeFiles/cmTC_d02f7.dir/build.make CMakeFiles/cmTC_d02f7.dir/build
+        make[1]: Entering directory '/home/user/JARI/build/CMakeFiles/CMakeScratch/TryCompile-H8V8r9'
+        Building C object CMakeFiles/cmTC_d02f7.dir/src.c.o
+        /usr/sbin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d02f7.dir/src.c.o -c /home/user/JARI/build/CMakeFiles/CMakeScratch/TryCompile-H8V8r9/src.c
+        Linking C executable cmTC_d02f7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d02f7.dir/link.txt --verbose=1
+        /usr/sbin/gcc -rdynamic CMakeFiles/cmTC_d02f7.dir/src.c.o -o cmTC_d02f7 
+        make[1]: Leaving directory '/home/user/JARI/build/CMakeFiles/CMakeScratch/TryCompile-H8V8r9'
+        
+      exitCode: 0
+...

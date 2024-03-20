@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240320-0133-Experimental"
+	Name="DESKTOP-QUHDR9Q"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/sbin/g++"
+	CompilerVersion="13.2.1"
+	OSName="Linux"
+	Hostname="DESKTOP-QUHDR9Q"
+	OSRelease="5.15.146.1-microsoft-standard-WSL2"
+	OSVersion="#1 SMP Thu Jan 11 04:09:03 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="151"
+	ProcessorCacheSize="18432"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="1024"
+	TotalPhysicalMemory="3805"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2995.2"
+	>
+	<Testing>
+		<StartDateTime>Mar 20 10:33 KST</StartDateTime>
+		<StartTestTime>1710898439</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 20 10:33 KST</EndDateTime>
+		<EndTestTime>1710898439</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

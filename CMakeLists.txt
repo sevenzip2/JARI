@@ -3,9 +3,10 @@ project(JARI VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
 enable_testing()
-
+add_subdirectory(random)
 add_executable(JARI main.cpp)
-
+add_definitions("-fmodules-ts -std=gnu++2b")
+target_link_libraries(JARI effolkronium_random)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

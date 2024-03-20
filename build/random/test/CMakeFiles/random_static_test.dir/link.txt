@@ -1,0 +1,1 @@
+/usr/sbin/g++ -O3 -DNDEBUG -rdynamic CMakeFiles/random_static_test.dir/random_test.cpp.o -o random_static_test 

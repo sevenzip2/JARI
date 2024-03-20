@@ -24,7 +24,7 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/sbin/addr2line
 CMAKE_AR:FILEPATH=/usr/sbin/ar
 
 //No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -296,6 +296,9 @@ CTEST_SUBMIT_RETRY_DELAY:STRING=5
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Path to a program.
+GITCOMMAND:FILEPATH=/usr/sbin/git
+
 //Value Computed by CMake
 JARI_BINARY_DIR:STATIC=/home/user/JARI/build
 
@@ -314,8 +317,29 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
+//Build the unit tests
+Random_BuildTests:BOOL=ON
+
 //Name of the computer/site where compile is being run
 SITE:STRING=DESKTOP-QUHDR9Q
+
+//Value Computed by CMake
+effolkronium_random_BINARY_DIR:STATIC=/home/user/JARI/build/random
+
+//Value Computed by CMake
+effolkronium_random_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+effolkronium_random_SOURCE_DIR:STATIC=/home/user/JARI/random
+
+//Value Computed by CMake
+effolkronium_random_test_BINARY_DIR:STATIC=/home/user/JARI/build/random/test
+
+//Value Computed by CMake
+effolkronium_random_test_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+effolkronium_random_test_SOURCE_DIR:STATIC=/home/user/JARI/random/test
 
 
 ########################
@@ -402,6 +426,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/user/JARI
@@ -424,7 +450,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -511,6 +537,10 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND

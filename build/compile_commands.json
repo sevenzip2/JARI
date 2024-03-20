@@ -1,25 +1,25 @@
 [
 {
   "directory": "/home/user/JARI/build",
-  "command": "/usr/sbin/g++  -I/home/user/JARI/random/include -O3 -DNDEBUG   -fmodules-ts -std=gnu++2b -o CMakeFiles/JARI.dir/main.cpp.o -c /home/user/JARI/main.cpp",
+  "command": "/usr/sbin/g++  -I/home/user/JARI/random/include -g   -fmodules-ts -std=gnu++2b -o CMakeFiles/JARI.dir/main.cpp.o -c /home/user/JARI/main.cpp",
   "file": "/home/user/JARI/main.cpp",
   "output": "CMakeFiles/JARI.dir/main.cpp.o"
 },
 {
   "directory": "/home/user/JARI/build/random/test",
-  "command": "/usr/sbin/g++ -DRANDOM_STATIC -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test -O3 -DNDEBUG -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -o CMakeFiles/random_static_test.dir/random_test.cpp.o -c /home/user/JARI/random/test/random_test.cpp",
+  "command": "/usr/sbin/g++ -DRANDOM_STATIC -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test -g -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -o CMakeFiles/random_static_test.dir/random_test.cpp.o -c /home/user/JARI/random/test/random_test.cpp",
   "file": "/home/user/JARI/random/test/random_test.cpp",
   "output": "random/test/CMakeFiles/random_static_test.dir/random_test.cpp.o"
 },
 {
   "directory": "/home/user/JARI/build/random/test",
-  "command": "/usr/sbin/g++ -DRANDOM_THREAD_LOCAL -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test -O3 -DNDEBUG -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -o CMakeFiles/random_thread_local_test.dir/random_test.cpp.o -c /home/user/JARI/random/test/random_test.cpp",
+  "command": "/usr/sbin/g++ -DRANDOM_THREAD_LOCAL -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test -g -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -o CMakeFiles/random_thread_local_test.dir/random_test.cpp.o -c /home/user/JARI/random/test/random_test.cpp",
   "file": "/home/user/JARI/random/test/random_test.cpp",
   "output": "random/test/CMakeFiles/random_thread_local_test.dir/random_test.cpp.o"
 },
 {
   "directory": "/home/user/JARI/build/random/test",
-  "command": "/usr/sbin/g++ -DRANDOM_LOCAL -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test -O3 -DNDEBUG -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -o CMakeFiles/random_local_test.dir/random_test.cpp.o -c /home/user/JARI/random/test/random_test.cpp",
+  "command": "/usr/sbin/g++ -DRANDOM_LOCAL -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test -g -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -o CMakeFiles/random_local_test.dir/random_test.cpp.o -c /home/user/JARI/random/test/random_test.cpp",
   "file": "/home/user/JARI/random/test/random_test.cpp",
   "output": "random/test/CMakeFiles/random_local_test.dir/random_test.cpp.o"
 }

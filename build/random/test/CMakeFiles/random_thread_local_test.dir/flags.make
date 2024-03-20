@@ -6,5 +6,5 @@ CXX_DEFINES = -DRANDOM_THREAD_LOCAL
 
 CXX_INCLUDES = -I/home/user/JARI/random/test/../include -I/home/user/JARI/random/test
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion
+CXX_FLAGS = -g -std=gnu++11 -Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor -pedantic -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion
 

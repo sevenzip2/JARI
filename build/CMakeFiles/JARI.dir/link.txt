@@ -1,1 +1,1 @@
-/usr/sbin/g++ -O3 -DNDEBUG -rdynamic CMakeFiles/JARI.dir/main.cpp.o -o JARI 
+/usr/sbin/g++ -g -rdynamic CMakeFiles/JARI.dir/main.cpp.o -o JARI 

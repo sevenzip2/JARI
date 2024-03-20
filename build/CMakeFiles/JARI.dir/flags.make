@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/user/JARI/random/include
 
-CXX_FLAGS = -O3 -DNDEBUG   -fmodules-ts -std=gnu++2b
+CXX_FLAGS = -g   -fmodules-ts -std=gnu++2b
 

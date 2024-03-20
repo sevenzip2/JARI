@@ -1,0 +1,215 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "random/test/random_thread_local_test"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_basic_test",
+			"add_main_test",
+			"target_compile_options",
+			"set_up_warnings",
+			"target_compile_definitions",
+			"target_include_directories",
+			"set_target_properties"
+		],
+		"files" : 
+		[
+			"random/test/CMakeLists.txt",
+			"random/test/set_up_warnings.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 2
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 2
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++11"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wshadow"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wnon-virtual-dtor"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-pedantic"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wold-style-cast"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wcast-align"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wunused"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Woverloaded-virtual"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wconversion"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wsign-conversion"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "RANDOM_THREAD_LOCAL"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "/home/user/JARI/random/test/../include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/user/JARI/random/test"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					8
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "random_thread_local_test::@7912fdb8790e3dc2c38a",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "random_thread_local_test",
+	"nameOnDisk" : "random_thread_local_test",
+	"paths" : 
+	{
+		"build" : "random/test",
+		"source" : "random/test"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "random/test/random_test.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

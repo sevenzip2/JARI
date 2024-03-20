@@ -1,11 +1,16 @@
 #pragma once
 #include "Jari.hpp"
 #include <vector>
+#include <stdexcept>
 #include <exception>
+#include <iostream>
+#include <cmath>
+#include <algorithm>
+unsigned GetNumberOfDigits(unsigned i);
 class Partition // 자리들 클래스
 {
 public:
-    Partition(int w, int h, int classnum, int sectionnum) : a(h) // w는 가로 자리 개수, h는 세로 자리 수, classnum은 반의 인원수, sectionnum은 1분단당 인원수를 의미
+    Partition(int w, int h, int classnum, int sectionnum) : a(h),b(classnum) // w는 가로 자리 개수, h는 세로 자리 수, classnum은 반의 인원수, sectionnum은 1분단당 인원수를 의미
     {
         int realw = w / sectionnum;                      // 가로 분단 수
         int modw = w % sectionnum;                       // 가로 분단 수의 나머지
@@ -41,8 +46,8 @@ public:
                 }
             }
             int newnum = classnum - (w * (h - 1)); // 남은 사람들
-            int realnnum = newnum / sectionnum;  // 남은 분단들
-            int modnnum = newnum % sectionnum;   // 남은 분단의 나머지
+            int realnnum = newnum / sectionnum;    // 남은 분단들
+            int modnnum = newnum % sectionnum;     // 남은 분단의 나머지
             for (int i = 0; i < realnnum; i++)
             {
                 a[a.size() - 1].push_back(std::vector<Jari>(sectionnum)); // 남은 분단들 추가
@@ -53,22 +58,35 @@ public:
             }
         }
         int num = 1;
-        for(int i=0; i<a.size();i++)//자리 번호 지정
+        for (int i = 0; i < a.size(); i++) // 자리 번호 지정
         {
-            for(int j=0;j<a[i].size();j++)
+            for (int j = 0; j < a[i].size(); j++)
             {
-                for(int k=0;k<a[i][j].size();k++)
+                for (int k = 0; k < a[i][j].size(); k++)
                 {
                     a[i][j][k].setnumber(num);
                     num++;
                 }
             }
         }
+        maxnum = num - 1;
+        std::ranges::iota(std::begin(b), std::end(b), 1); // Fill with 0, 1, ..., 99.
     }
-    const std::vector<std::vector<std::vector<Jari>>> & geta() const
+    const std::vector<std::vector<std::vector<Jari>>> &geta() const
     {
         return a;
     }
+    int getmaxnum() const
+
+    {
+        return maxnum;
+    }
+    void changeRandom(int presetnum, std::vector<int> presetlist);
+    void changeRandom();
 private:
     std::vector<std::vector<std::vector<Jari>>> a; // 자리
+    std::vector<int> b;//사람들
+    int maxnum;
+    
 };
+void printpartition(const std::vector<std::vector<std::vector<Jari>>> &, int, bool); // 자리 출력 함수

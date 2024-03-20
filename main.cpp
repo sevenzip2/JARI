@@ -72,7 +72,7 @@ int main(int, char **)
         Part.changeRandom();
         printpartition(Part.geta(), Part.getmaxnum(), true);
     }
-    #ifdef Win32 
+    #ifdef _WIN32 
     system("pause");
     #endif
 }

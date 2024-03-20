@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/sevenzip/JARI",
+    "cmake.sourceDirectory": "C:/Users/sevenzip/Documents/JARI",
     "files.associations": {
         "iostream": "cpp",
         "array": "cpp",

@@ -3,8 +3,14 @@
 using std::cin;
 using std::cout;
 using std::endl;
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 int main(int, char **)
 {
+    #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    #endif
     int w, h, classnum, sectionnum;
     int ifprefix;
     int prefixnum;

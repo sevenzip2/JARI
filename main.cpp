@@ -111,6 +111,7 @@ void run()
         cout << "자리배정을 시작합니다." << endl;
         Part.changeRandom();
         printpartition(Part.geta(), classnum, true);
+        fprintpartition(Part.geta(),classnum,true);
     }
 }
 int main(int, char **)

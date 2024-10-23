@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <fstream>
 using Random = effolkronium::random_static;
 unsigned GetNumberOfDigits(unsigned i);
 class Partition // 자리들 클래스
@@ -90,3 +91,4 @@ private:
     std::vector<int> b;                            // 사람들
 };
 void printpartition(const std::vector<std::vector<std::vector<Jari>>> &, int, bool); // 자리 출력 함수
+void fprintpartition(const std::vector<std::vector<std::vector<Jari>>> &, int, bool); // 자리 출력 함수

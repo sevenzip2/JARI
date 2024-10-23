@@ -84,6 +84,32 @@ void Partition::changeRandom(int presetstart, int presetnum, const std::vector<i
         }
     }
 }
+void fprintpartition(const std::vector<std::vector<std::vector<Jari>>> & a, int maxnum, bool prefix) // 자리 출력 함수(File)
+{
+  int Jarisu = GetNumberOfDigits(maxnum);
+ std::ofstream fp("JARI.csv",std::ios_base::out);
+    for (auto &x : a)
+    {
+        for (auto &y : x)
+        {
+            for (auto &z : y)
+            {
+                int q;
+                if (prefix == false)
+                {
+                    q = z.getnumber();
+                }
+                else
+                {
+                    q = z.getclassnum();
+                }
+                fp << q << ",";
+            }
+            fp<<",";
+        }
+        fp<<"\n";
+    }
+}
 void Partition::changeRandom() // 선지정되지 않은 모든 자리를 랜덤 좌석 배열
 {
     Random::shuffle(b);

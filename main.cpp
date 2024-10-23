@@ -12,7 +12,7 @@ void run()
     int ifprefix;
     int prefixstart, prefixend;
     std::vector<int> classnums;
-    std::cout << "자리 바꾸기 프로그램 1.1.0" << std::endl;
+    std::cout << "자리 바꾸기 프로그램 1.2.0" << std::endl;
     Partition Part;
     while (1)
     {
@@ -97,6 +97,8 @@ void run()
                 Part.changeRandom(prefixstart, prefixend, a);
                 Part.changeRandom();
                 printpartition(Part.geta(), classnum, true);
+                fprintpartition(Part.geta(),classnum,true);
+
             }
             catch (const std::exception &e)
             {
